@@ -9,22 +9,27 @@ A Python script that aggregates BTC-USD order book data from two exchanges, it p
    cd btc_orderbook_aggregator
 
 2. **Create virtual environment:**
+   
    python -m venv venv_name
    
    source venv_name/bin/activate #--> macOS
 
-4. **Install dependencies:**
+3. **Install dependencies:**
+ 
    pip install requests
 
-5. **Run the script:**
+4. **Run the script:**
+   
    python main.py --qty number
    
    The script accepts a --qty argument to specify the BTC quantity, the default quantity is 10
 
 ## Assumptions:
+
 For analyzing the structure of the Coinbase data, I was able to determine that each entry in bids and asks is: [price, size, num_orders], by visiting the Coinbase Exchange API documentation, link: https://docs.cdp.coinbase.com/api-reference/exchange-api/rest-api/products/get-product-book
 
 ## Issues encounteded:
+
 While pushing the script to GitHub, the HTTPS authentication failed since password-based authentication is no longer supported. I was able to resolve this by installing and authorizing the GitHub CLI via Homebrew.
 
 brew install gh

@@ -15,6 +15,7 @@ A Python script that aggregates BTC-USD order book data from two exchanges, it p
 
 4. **Run the script:**
    python main.py --qty number
+   
    The script accepts a --qty argument to specify the BTC quantity, the default quantity is 10
 
 ## Assumptions:
